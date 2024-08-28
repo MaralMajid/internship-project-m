@@ -9,7 +9,9 @@ class SettingPage(Page):
     SETTING_BTTN= (By.CSS_SELECTOR,"a[href='/settings']")
     USER_GUIDE_BTN= (By.CSS_SELECTOR,'a[href="/user-guide"] div[class="setting-text"]')
     USER_GUIDE_PAGE=(By.XPATH,"//*[contains(text(),'User guide')]")
-    VIDEO_TITLE= (By.CSS_SELECTOR, 'div[class="ytp-title"]')
+    VIDEO_TITLE = (By.CSS_SELECTOR, '#player div[class*=cards-title]')
+    VID_IFRAME = (By.CSS_SELECTOR, ".embedly-embed")
+    SEC_IFRAME = (By.ID, "player")
 
 
     def click_setting_button(self,*locator):
@@ -24,5 +26,8 @@ class SettingPage(Page):
 
 
     def verify_video_title(self):
-        sleep(10)
-        self.find_element(*self.VIDEO_TITLE)
+        iframe_element = self.find_element(*self.VID_IFRAME)
+        self.driver.switch_to.frame(iframe_element)
+        second_iframe = self.find_element(*self.SEC_IFRAME)
+        self.driver.switch_to.frame(second_iframe)
+        self.wait.until(EC.presence_of_element_located(self.VIDEO_TITLE))

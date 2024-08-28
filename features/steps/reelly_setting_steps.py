@@ -17,7 +17,6 @@ def verify_user_guide_page_opens(context):
     context.app.reelly_setting_page.verify_right_page()
 
 
-@then('Verify all lesson videos contain titles')
+@then('Verify all lesson videos contain title')
 def verify_videos_contain_titles(context):
     context.app.reelly_setting_page.verify_video_title()
-    sleep(7)

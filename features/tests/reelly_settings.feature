@@ -10,4 +10,4 @@ Feature: Setting
     Then Click on Setting button
     When Click on User Guide button
     Then Verify that right page opens
-    Then Verify all lesson videos contain titles
+    Then Verify all lesson videos contain title

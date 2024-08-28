@@ -13,8 +13,10 @@ class Sign_In_Page(Page):
     def input_email(self, *locator):
         self.driver.find_element(*self.USERNAME_INPUT).send_keys('maralmajid94@gmail.com')
 
+
     def input_password(self, *locator):
         self.driver.find_element(*self.PASSWORD_INPUT).send_keys('abcfed132')
+
 
     def click(self, *locator):
         self.driver.find_element(*self.CONTINUE_BTTN).click()

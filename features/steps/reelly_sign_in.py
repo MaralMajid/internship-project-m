@@ -17,9 +17,11 @@ def input_email(context):
 
 
 
+
 @when('Input correct password')
 def input_password(context):
     context.app.sign_in_page.input_password()
+
 
 
 

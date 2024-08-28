@@ -7,7 +7,7 @@ Feature: Reelly sign in feature
     When Input correct email address
     When Input correct password
     Then Click on continue button
-    Then Verify that main page
+    Then Verify that main  page
 
 
 
