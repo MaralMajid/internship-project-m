@@ -14,7 +14,7 @@ def click_user_guide_btn(context):
 
 @then('Verify that right page opens')
 def verify_user_guide_page_opens(context):
-    context.app.reelly_setting_page.verify_right_page()
+    context.app.reelly_setting_page.verify_right_url()
 
 
 @then('Verify all lesson videos contain title')

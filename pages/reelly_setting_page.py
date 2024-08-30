@@ -21,8 +21,11 @@ class SettingPage(Page):
         self.click(*self.USER_GUIDE_BTN)
 
 
-    def verify_right_page(self):
-        self.driver.find_element(*self.USER_GUIDE_PAGE)
+    # def verify_right_page(self):
+    #     self.driver.find_element(*self.USER_GUIDE_PAGE)
+
+    def verify_right_url(self):
+        self.verify_url('https://soft.reelly.io/user-guide')
 
 
     def verify_video_title(self):

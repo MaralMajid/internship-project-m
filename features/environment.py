@@ -12,9 +12,9 @@ def browser_init(context):
     """
 
 
-    # driver_path =ChromeDriverManager().install()
-    # service = Service(driver_path)
-    # context.driver = webdriver.Chrome(service=service)
+    driver_path =ChromeDriverManager().install()
+    service = Service(driver_path)
+    context.driver = webdriver.Chrome(service=service)
 
 
     # options = webdriver.ChromeOptions()
@@ -22,9 +22,9 @@ def browser_init(context):
     # service = Service(ChromeDriverManager().install())
     # context.driver = webdriver.Chrome(service=service, options=options)
 
-    driver_path = GeckoDriverManager().install()
-    service = Service(driver_path)
-    context.driver=webdriver.Firefox(service=service)
+    # driver_path = GeckoDriverManager().install()
+    # service = Service(driver_path)
+    # context.driver=webdriver.Firefox(service=service)
 
 
 
