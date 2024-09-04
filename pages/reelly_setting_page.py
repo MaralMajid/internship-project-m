@@ -15,6 +15,7 @@ class SettingPage(Page):
 
 
     def click_setting_button(self,*locator):
+        sleep(5)
         self.click(*self.SETTING_BTTN)
 
     def click_user_guide_btn(self,*locator):
