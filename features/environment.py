@@ -7,15 +7,15 @@ from webdriver_manager.firefox import GeckoDriverManager
 from app.application import Application
 
 
-def browser_init(context, scenario_name):
+def browser_init(context):
     """
     :param context: Behave context
     """
 
 
-    # driver_path =ChromeDriverManager().install()
-    # service = Service(driver_path)
-    # context.driver = webdriver.Chrome(service=service)
+    driver_path =ChromeDriverManager().install()
+    service = Service(driver_path)
+    context.driver = webdriver.Chrome(service=service)
 
 
     # options = webdriver.ChromeOptions()
@@ -30,21 +30,21 @@ def browser_init(context, scenario_name):
 
 
 
-    # # ---- BROWSERSTACK ----
-    bs_user = 'maralmajidli_lSNKum'
-    bs_key = 'qpfRaSgmXazBa1uqzg1f'
-    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
-
-    options = Options()
-    bstack_options = {
-        "os": "OS X",
-        "osVersion": "Sonoma",
-        'browserName': 'Safari',
-        'browserVersion': '17.3',
-        'sessionName': scenario_name
-    }
-    options.set_capability('bstack:options', bstack_options)
-    context.driver = webdriver.Remote(command_executor=url, options=options)
+    # # # ---- BROWSERSTACK ----
+    # bs_user = 'maralmajidli_lSNKum'
+    # bs_key = 'qpfRaSgmXazBa1uqzg1f'
+    # url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    #
+    # options = Options()
+    # bstack_options = {
+    #     "os": "OS X",
+    #     "osVersion": "Sonoma",
+    #     'browserName': 'Safari',
+    #     'browserVersion': '17.3',
+    #     'sessionName': scenario_name
+    # }
+    # options.set_capability('bstack:options', bstack_options)
+    # context.driver = webdriver.Remote(command_executor=url, options=options)
 
 
 
@@ -56,7 +56,7 @@ def browser_init(context, scenario_name):
 
 def before_scenario(context, scenario):
     print('\nStarted scenario: ', scenario.name)
-    browser_init(context, scenario.name)
+    browser_init(context)
 
 
 def before_step(context, step):
