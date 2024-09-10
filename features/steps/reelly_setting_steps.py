@@ -2,9 +2,15 @@ from behave import when, then
 from time import sleep
 
 
-@then('Click on Setting button')
-def click_setting_btn(context):
-    context.app.reelly_setting_page.click_setting_button()
+# @then('Click on Setting button')
+# def click_setting_btn(context):
+#     context.app.reelly_setting_page.click_setting_button()
+
+
+@then( 'Click on Menu button')
+def click_on_menu_button(context):
+    context.app.reelly_setting_page.click_on_menu_btn()
+
 
 
 @when('Click on User Guide button')
