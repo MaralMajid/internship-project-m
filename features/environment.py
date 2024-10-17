@@ -13,21 +13,21 @@ def browser_init(context):
     """
 
 
-    # driver_path =ChromeDriverManager().install()
-    # service = Service(driver_path)
-    # context.driver = webdriver.Chrome(service=service, options =chrome_options)
-
-    #
-    chrome_options = Options()
-    mobile_emulation = {"deviceName": "Nexus 5"}
-    #chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
-    #driver = webdriver.Remote(command_executor='http://127.0.0.1:4444/wd/hub',
-                              #desired_capabilities=chrome_options.to_capabilities())
-
-    driver_path = ChromeDriverManager().install()
+    driver_path =ChromeDriverManager().install()
     service = Service(driver_path)
-    context.driver = webdriver.Chrome(service=service, options=chrome_options)
+    context.driver = webdriver.Chrome(service=service)
+    #
+    # #
+    # chrome_options = Options()
+    # mobile_emulation = {"deviceName": "Nexus 5"}
+    # #chrome_options = webdriver.ChromeOptions()
+    # chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
+    # #driver = webdriver.Remote(command_executor='http://127.0.0.1:4444/wd/hub',
+    #                           #desired_capabilities=chrome_options.to_capabilities())
+
+    # driver_path = ChromeDriverManager().install()
+    # service = Service(driver_path)
+    # context.driver = webdriver.Chrome(service=service, options=chrome_options)
 
     # options = webdriver.ChromeOptions()
     # options.add_argument('headless')

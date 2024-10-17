@@ -7,7 +7,7 @@ Feature: Setting
     When Input correct email address
     When Input correct password
     Then Click on continue button
-    #Then Click on Setting button
+    Then Click on Setting button
     Then Click on Menu button
     When Click on User Guide button
     Then Verify that right page opens

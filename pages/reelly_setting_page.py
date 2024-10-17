@@ -18,9 +18,9 @@ class SettingPage(Page):
     SEC_IFRAME = (By.ID, "player")
 
 
-    # def click_setting_button(self,*locator):
-    #     sleep(15)
-    #     self.click(*self.SETTING_BTTN)
+    def click_setting_button(self,*locator):
+        sleep(15)
+        self.click(*self.SETTING_BTTN)
 
 
     def click_on_menu_btn(self, *locator):
