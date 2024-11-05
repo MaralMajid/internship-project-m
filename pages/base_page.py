@@ -53,3 +53,8 @@ class Page:
     def verify_partial_url(self, expected_partial_url, *locator):
         actual_url = self.driver.current_url
         assert expected_partial_url in actual_url, f'Expected {expected_partial_url} not in actual {actual_url}'
+
+    def wait_for_element_to_be_clickable_click(self, *locator):
+        self.wait.until(EC.element_to_be_clickable(locator),
+                        message=f'Element by {locator} is not clickable'
+                        ).click()

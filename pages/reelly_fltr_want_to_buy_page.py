@@ -28,7 +28,11 @@ class FltrWantToBuy(Page):
 
 
     def click_on_filters(self, *locator):
-        self.click(*self.FILTERS)
+        #self.click(*self.FILTERS)
+        sleep(3)
+        self.wait_for_element_to_be_clickable_click(*self.FILTERS)
+
+
 
     def select_want_to_buy(self, *locator):
         self.driver.find_element(*self.SLCT_WANT_TO_BUY).click()
