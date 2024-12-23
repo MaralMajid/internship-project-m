@@ -6,6 +6,8 @@ from pages.reelly_setting_page import SettingPage
 from pages.reelly_fltr_want_to_buy_page import FltrWantToBuy
 from pages.reelly_secondary_price_page import SecondaryPricePage
 from pages.reelly_off_plan_price_page import OffPlanPricePage
+from pages.reelly_pic_title_off_plan_page import PicTitleVisibilityPage
+
 
 class Application:
     def __init__(self, driver):
@@ -17,6 +19,7 @@ class Application:
         self.reelly_fltr_want_to_buy_page = FltrWantToBuy(driver)
         self.reelly_secondary_price_page = SecondaryPricePage(driver)
         self.reelly_off_plan_price_page = OffPlanPricePage(driver)
+        self.reelly_pic_title_off_plan_page = PicTitleVisibilityPage(driver)
 
 
 
