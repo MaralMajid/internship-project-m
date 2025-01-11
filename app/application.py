@@ -7,6 +7,7 @@ from pages.reelly_fltr_want_to_buy_page import FltrWantToBuy
 from pages.reelly_secondary_price_page import SecondaryPricePage
 from pages.reelly_off_plan_price_page import OffPlanPricePage
 from pages.reelly_pic_title_off_plan_page import PicTitleVisibilityPage
+from pages.relly_out_of_stock_fltr_page import OutOfStockPage
 
 
 class Application:
@@ -20,6 +21,7 @@ class Application:
         self.reelly_secondary_price_page = SecondaryPricePage(driver)
         self.reelly_off_plan_price_page = OffPlanPricePage(driver)
         self.reelly_pic_title_off_plan_page = PicTitleVisibilityPage(driver)
+        self.reelly_out_of_stock_fltr_page = OutOfStockPage(driver)
 
 
 
